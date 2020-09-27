@@ -13,17 +13,9 @@
   <name>domain</name>
   <url>http://maven.apache.org</url>
   
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+ 
   
   <dependencies>
-       <!-- MySQL JDBC driver -->
-		<!-- http://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>8.0.18</version>
-		</dependency>
+  
 	  </dependencies>
 </project>

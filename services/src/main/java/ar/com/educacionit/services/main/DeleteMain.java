@@ -1,6 +1,5 @@
 package ar.com.educacionit.services.main;
 
-
 import java.util.Collection;
 
 import ar.com.educacionit.domain.Producto;
@@ -8,21 +7,20 @@ import ar.com.educacionit.services.ProductoServices;
 import ar.com.educacionit.services.ProductoServicesImpl;
 import ar.com.educacionit.services.exceptions.ServiceException;
 
-public class MainConection {
+public class DeleteMain {
 
 	public static void main(String[] args) throws ServiceException {
-		// interfaz i = new Clase();
 		
-		ProductoServices pdao = new ProductoServicesImpl();
+		ProductoServices service = new ProductoServicesImpl();
 		
-		Collection<Producto> productos = pdao.findProductos();
+		Collection<Producto> productos = service.findProductos();
 		
-		for(Producto producto: productos) {
-			System.out.println(producto);	
+		if (!productos.isEmpty()) { // si no está vacío
+			
+			Producto p = productos.iterator().next(); // hacemos un next sobre el iterator y le pedimos el primero.
+		
+			service.eliminarProducto(p.getId());
 		}
 	}
 
 }
-
-
- 
